@@ -61,6 +61,7 @@ You will be running your tests in one terminal and debugging in the other. As yo
 Edit the `ReadMe` file with your answers to the questions below.
 
 1. In your own words, define closure (1-2 sentences).
+- In terms of javascript, closure means to reference variables within inside the function vs outside the function. It helps with privacy issues.
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -82,9 +83,13 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
-b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
-c. What is the lexical scope of `newRoll`? 
+- The closure is the return function because it's a function within a function. 
 
+b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+- Dan will be rolling twice given 2 different numbers (possibly) each time.
+
+c. What is the lexical scope of `newRoll`? 
+- name & newRoll
 
 ### Task 3 - Stretch Goals
 
