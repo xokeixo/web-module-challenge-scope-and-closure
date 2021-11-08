@@ -28,11 +28,14 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   Study the code for counter1 and counter2, then answer the questions below.
   
   1. What is the difference between counter1 and counter2?
+  - counter1 is inside a function while counter2 is its own function
   
   2. Which of the two uses a closure? How can you tell?
+  - counter1 because its a function inside of a function
   
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
+  - counter2 = when youre counting how many of something
 */
 
 // counter1 code
@@ -63,7 +66,7 @@ NOTE: This will be a callback function for the tasks below
 */
 
 function inning(number){
-        return Math.floor(Math.random() * 3);
+        return Math.floor(Math.random() * 2);
 }
 
 
@@ -81,10 +84,17 @@ Use the finalScore function below to do the following:
 }
 */ 
 
-function finalScore(/*code Here*/){
-  /*Code Here*/
-}
+function finalScore(inning, number){
+  let home = 0;
+  let away = 0;
 
+  for(let i = 0; i < number; i++){
+    home = home +  inning()
+    away = away + inning()
+  }
+  return {Home: home, Away: away};
+}
+console.log(finalScore(inning, 9));
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
 Use the getInningScore() function below to do the following:
   1. Receive a callback function - you will pass in the inning function from task 2 as your argument 
